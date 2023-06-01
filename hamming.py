@@ -7,7 +7,7 @@ def distance(strand_a, strand_b):
     if not(valid_strand(strand_a)) or not(valid_strand(strand_b)):
         return False    
     dist = 0    
-    for index in range(0, len(strand_a)):
+    for index in range(len(strand_a)):
         if strand_a[index] != strand_b[index]:
             dist += 1 
     return dist            
