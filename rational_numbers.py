@@ -1,7 +1,11 @@
 import math
 
-
+# Implement a class for rational numbers.
 class Rational:
+    """
+    A rational number is defined as the quotient of two integers a and b, 
+    called the numerator and denominator, respectively, where b != 0.
+    """
     def __init__(self, numer, denom, /):
         if (numer != int(numer)) or (denom != int(denom)):
             raise TypeError("expecting integer factors")
