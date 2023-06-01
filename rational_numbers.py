@@ -50,6 +50,7 @@ class Rational:
         return Rational(abs(self.numer), abs(self.denom))
 
     def __pow__(self, power):
+        # Exponentiation of a given rational number to an integer power.
         if power >= 0:
             return Rational(pow(self.numer, power),
                             pow(self.denom, power))
@@ -58,4 +59,5 @@ class Rational:
                             pow(self.numer, -power))
 
     def __rpow__(self, base):
+        # Exponentiation of a real number to a rational number.
         return pow(base, self.numer / self.denom)
